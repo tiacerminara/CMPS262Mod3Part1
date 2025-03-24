@@ -1,6 +1,11 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+    res.send('Here are some movies!');
+  });
+  
 
 const movies = [
   { id: 1, title: "The Shawshank Redemption", year: 1994 },
